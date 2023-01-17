@@ -1,5 +1,6 @@
 // The value for 'accessToken' begins with 'pk...'
-mapboxgl.accessToken = "pk.eyJ1IjoiZ291cnVpa3VuIiwiYSI6ImNsY3ExOHN0cDAxZ28zcHBkcmVtOHM2eTAifQ.xJSBbaOJw1ggDn4lzq0SNw";
+mapboxgl.accessToken =
+  "pk.eyJ1IjoiZ291cnVpa3VuIiwiYSI6ImNsY3ExOHN0cDAxZ28zcHBkcmVtOHM2eTAifQ.xJSBbaOJw1ggDn4lzq0SNw";
 
 // Define a map object by initialising a Map from Mapbox
 const map = new mapboxgl.Map({
@@ -8,21 +9,21 @@ const map = new mapboxgl.Map({
   style: "mapbox://styles/gouruikun/cld09kcoc004k14p2e7b3uprk"
 });
 map.on("mousemove", (event) => {
-    const dzone = map.queryRenderedFeatures(event.point, {
-      layers: ["glasgow-simd"]
-    });
-    document.getElementById("pd").innerHTML = dzone.length
-      ? `<h3>${dzone[0].properties.DZName}</h3><p>Rank: <strong>${dzone[0].properties.Percentv2}</strong> %</p>`
-      : `<p>Hover over a data zone!</p>`;
-      map.getSource("hover").setData({
+  const dzone = map.queryRenderedFeatures(event.point, {
+    layers: ["glasgow-simd"]
+  });
+  document.getElementById("pd").innerHTML = dzone.length
+    ? `<h3>${dzone[0].properties.DZName}</h3><p>Rank: <strong>${dzone[0].properties.Percentv2}</strong> %</p>`
+    : `<p>Hover over a data zone!</p>`;
+  map.getSource("hover").setData({
     type: "FeatureCollection",
     features: dzone.map(function (f) {
       return { type: "Feature", geometry: f.geometry };
     })
   });
-
 });
-map.on('load',()=> {const layers = [
+map.on("load", () => {
+  const layers = [
     "<10",
     "20 ",
     "30 ",
@@ -52,19 +53,18 @@ map.on('load',()=> {const layers = [
 
   layers.forEach((layer, i) => {
     const color = colors[i];
-const key = document.createElement("div");
-//place holder
+    const key = document.createElement("div");
+    //place holder
     key.className = "legend-key";
     key.style.backgroundColor = color;
     key.innerHTML = `${layer}`;
 
     legend.appendChild(key);
-        if (i <= 1 || i >= 8) {
+    if (i <= 1 || i >= 8) {
       key.style.color = "white";
     }
-
   });
-map.addSource("hover", {
+  map.addSource("hover", {
     type: "geojson",
     data: { type: "FeatureCollection", features: [] }
   });
@@ -77,12 +77,9 @@ map.addSource("hover", {
     paint: {
       "line-color": "black",
       "line-width": 4
-}
+    }
+  });
 });
-
-
-       
-       })
 const geocoder = new MapboxGeocoder({
   // Initialize the geocoder
   accessToken: mapboxgl.accessToken, // Set the access token
