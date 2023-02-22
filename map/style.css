@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+#map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+h1 {
+  font-size: 20px;
+  font-family: Verdana, Genva, Arial, sans-serif;
+  line-height: 30px;
+}
+
+p {
+  margin: 10px;
+  font-size: 16px;
+  text-align: float;
+  font-family: "Times New Roman", Times, serif;
+}
+
+h2 {
+  font-size: 15px;
+  line-height: 20px;
+  margin-bottom: 10px;
+  font-family: Verdana, Genva, Arial, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #2dc4b2;
+}
+
+#console {
+  position: absolute;
+  width: 350px;
+  margin: 10px;
+  padding: 7px 20px;
+  background: rgba(255, 235, 181, 0.8);
+}
+
+.session {
+  argin-bottom: 20px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.row {
+  height: 30px;
+  width: 100%;
+}
+
+.map-overlay {
+  position: absolute;
+  bottom: 20px;
+  right: 0;
+  background: #fff;
+  margin-right: 20px;
+  font-family: Arial, sans-serif;
+  overflow: auto;
+  border-radius: 3px;
+}
+
+#features {
+  bottom: 10px;
+  height: 200px;
+  margin-top: 20px;
+  width: 400px;
+  line-height: 20px;
+  background: rgba(255, 235, 181, 0.8);
+}
+
+h3 {
+  font-size: 16px;
+  font-family: Verdana, Genva, Arial, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  margin: 10px;
+}
+
+h4 {
+  margin: 10px;
+  font-size: 16px;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+}

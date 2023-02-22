@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - mapmap</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<html lang='en'>
+
+<head>
+  <meta charset='utf-8' />
+  <title>Toggle layers</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1' />
+  <!-- Mapbox JS API !-->
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.js'></script>
+  <!-- Mapbox CSS!-->
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.css' rel='stylesheet' />
+</head>
+
+<body>
+  <div id='map'></div>
+  <div id='console'>
+    <h1>Michelin Resturant</h1>
+    <p>Data: <a href='https://www.kaggle.com/datasets/jackywang529/michelin-restaurants'>Resturant Data </a> in New York City</p>
+
+    <!–– Slider goes below––>
+      <!–– Radio buttons go below––>
+        <div class='session'>
+          <h2>Resturant Level</h2>
+          <div class='row' id='filters'>
+            <input id='all' type='radio' name='toggle' value='all' checked='checked'>
+            <label for='all'>All</label>
+            <input id='One Star' type='radio' name='toggle' value='One Star'>
+            <label for='One Star'>★</label>
+            <input id='Two Star' type='radio' name='toggle' value='Two Star'>
+            <label for='Two Star'>★★</label>
+            <input id='Three Star' type='radio' name='toggle' value='Three Star'>
+            <label for='Three Star'>★★★</label>
+          </div>
+        </div>
+
+  </div>
+
+  <div class='map-overlay' id="features">
+    <h3> Michelin Resturant Information</h3>
+    <div id='pd'>
+      <h4>Hover over a data zone! </h4>
+    </div>
+  </div>
+  <div class="map-overlay" id="legend">
+    <div>Legend</div>
+  </div>
+
+  <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.min.js'></script>
+  <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.css' type='text/css' />
+
+</body>
+
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
