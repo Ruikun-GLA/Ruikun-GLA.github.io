@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Change</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<html lang='en'>
+
+<head>
+  <meta charset='utf-8' />
+  <title>Toggle layers</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1' />
+  <!-- Mapbox JS API !-->
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.js'></script>
+  <!-- Mapbox CSS!-->
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.css' rel='stylesheet' />
+   <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.min.js'></script>
+  <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.css' type='text/css' />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Kalam:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div id='map'></div>
+<div id='title'>
+    <h1>Welcome To North Somerset!</h1>
+ </div>
+  <div id='console'>
+    <h2>Tourism Guidance of North Somerset</h2>
+    <p>Data: <a href='https://ckan.publishing.service.gov.uk/dataset/sites-and-attractions-nsc'>Attractions </a>in North Somerset</p>
+ </div>
+              
+<div class="dropdown">
+  <button id="Button" class="button">Explore !</button>
+  <div class="content" id="content" >
+    <button class="dropdown-option" id="option" data-value="food">
+      <img src="https://raw.githubusercontent.com/Ruikun-GLA/Icons-for-web-mapping/main/restaurant.svg" alt=" ">Restaurant
+    </button>
+    <button id="option" class="dropdown-option" data-value="nature">
+      <img src="https://raw.githubusercontent.com/Ruikun-GLA/Icons-for-web-mapping/main/park.svg" alt=" ">Nature Reserve
+    </button>
+    <button id="option" class="dropdown-option" data-value="museum">
+      <img src="https://raw.githubusercontent.com/Ruikun-GLA/Icons-for-web-mapping/main/museum.svg" alt=" ">Museum
+    </button>
+    <button id="option" class="dropdown-option" data-value="structure">
+      <img src="https://raw.githubusercontent.com/Ruikun-GLA/Icons-for-web-mapping/main/castle.svg" alt=" ">Historic Structure
+    </button>
+    <button id="option" class="dropdown-option" data-value="attraction">
+      <img src="https://raw.githubusercontent.com/Ruikun-GLA/Icons-for-web-mapping/main/embassy.svg" alt=" ">Attraction
+    </button>
+    <button id="option" class="dropdown-option" data-value="playground">
+      <img src="https://raw.githubusercontent.com/Ruikun-GLA/Icons-for-web-mapping/main/playground.svg" alt=" ">Outdoor Activity
+    </button>
+    <button id="option" class="dropdown-option" data-value="all" style= center >All
+    </button>
+  </div>
+</div>
+
+
+  
+
+  
+</body>
+  
+
+
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
